@@ -13,5 +13,14 @@ export default defineNuxtConfig({
     url: process.env.SUPABASE_URL,
     key: process.env.SUPABASE_KEY,
     redirect: false // Desabilitando redirecionamento automático
+  },
+  components: {
+    dirs: [
+      {
+        path: '~/app/components',
+        pathPrefix: false,
+        global: true
+      }
+    ]
   }
 })
