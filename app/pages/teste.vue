@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Dialog, DialogPanel, Switch, Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
+import { BellIcon, InformationCircleIcon, XCircleIcon } from '@heroicons/vue/24/outline'
 import BaseButton from '~/components/base/BaseButton.vue'
 import BaseInput from '~/components/base/BaseInput.vue'
 import BaseLink from '~/components/base/BaseLink.vue'
@@ -76,6 +77,28 @@ const menuItems = [
               <BaseButton disabled>Disabled</BaseButton>
               <BaseButton loading>Loading</BaseButton>
               <BaseButton type="submit">Submit</BaseButton>
+            </div>
+          </div>
+
+          <!-- Com Ícones -->
+          <div>
+            <h3 class="text-lg font-medium text-secondary mb-4">Com Ícones</h3>
+            <div class="flex flex-wrap gap-4">
+              <BaseButton>
+                <BellIcon class="h-5 w-5 mr-2" />
+                Notificações
+              </BaseButton>
+              <BaseButton variant="outline">
+                <InformationCircleIcon class="h-5 w-5 mr-2" />
+                Informações
+              </BaseButton>
+              <BaseButton variant="destructive">
+                <XCircleIcon class="h-5 w-5 mr-2" />
+                Excluir
+              </BaseButton>
+              <BaseButton size="icon" variant="ghost">
+                <BellIcon class="h-5 w-5" />
+              </BaseButton>
             </div>
           </div>
         </div>
